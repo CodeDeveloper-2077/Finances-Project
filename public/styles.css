@@ -1,0 +1,89 @@
+body {
+    font-family: 'Alexandria', sans-serif;;
+}
+
+header, h3 {
+    font-weight: bolder;
+    color: #f90fbe;
+    text-align: center;
+    margin: 25x;
+    padding: 10px;
+}
+
+h3, div {
+    margin: 5px;
+    text-align: justify;
+    margin: 5px;
+    padding: 2px;
+}
+
+footer {
+    background-color: #e4e1e1;
+}
+
+form {
+    width: 100%;
+    padding: 80px;
+}
+
+.form-group {
+    margin: 6px;
+    padding: 6px;
+    display: inline-block;
+}
+
+.form-group input, select {
+    padding: 5px;
+    border: none;
+    /* outline: none; */
+    border-radius: 3px;
+}
+
+select {
+    width: 200px;
+    text-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.form-group label {
+    margin-bottom: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+input[type='submit'] {
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    background-color: #f90fbe;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    margin: 18px;
+    padding: 18px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 70%;
+}
+
+.close-btn {
+    border: 2px solid black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    margin-right: 18px;
+    float: left;
+    text-align: center;
+}

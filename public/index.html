@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap" rel="stylesheet" />
+</head>
+<body>
+    
+    <header>
+        <h1>Finances</h1>
+    </header>
+
+    <ul class="outlays-list">
+        
+    </ul>
+
+    <footer>
+        <form name="addEntryForm" id="addEntryForm">
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select name="category" id="category" class="category">
+                    <option value="Products">Products</option>
+                    <option value="Goods4Home">Goods4Home</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Home">Home</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="datetime" name="date" id="date" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" />
+            </div>
+
+            <div class="form-group">
+                <label for="details">Details:</label>
+                <input type="text" name="details" id="details" autocomplete="off" />
+            </div>
+
+            <input type="submit" value="Submit!" />
+        </form>
+    </footer>
+
+    <template id="listItem">
+        <li>
+            <h1 id="category"></h1>
+            <div id="message">
+            </div>
+        </li>
+    </template>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
