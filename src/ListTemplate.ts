@@ -1,7 +1,7 @@
 export class ListTemplate {
     constructor(private readonly _unorderedList: HTMLUListElement) {}
 
-    public render(category: string, message: string, position: 'start'|'end' = 'end'): void {
+    public render(category: string, message: string, position: 'start'|'end' = 'end'): HTMLLIElement {
         let li = document.createElement("li");
 
         let closeBtn = document.createElement("div");
@@ -21,5 +21,7 @@ export class ListTemplate {
             this._unorderedList.append(li);
         else
             this._unorderedList.prepend(li);
+
+        return li;
     }
 }

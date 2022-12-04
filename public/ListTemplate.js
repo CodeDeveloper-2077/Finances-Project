@@ -18,5 +18,6 @@ export class ListTemplate {
             this._unorderedList.append(li);
         else
             this._unorderedList.prepend(li);
+        return li;
     }
 }
