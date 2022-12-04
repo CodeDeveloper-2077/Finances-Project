@@ -1,7 +1,9 @@
+import { Entry } from "./Entry";
+
 export class ListTemplate {
     constructor(private readonly _unorderedList: HTMLUListElement) {}
 
-    public render(category: string, message: string, position: 'start'|'end' = 'end'): HTMLLIElement {
+    public render(entry: Entry, position: 'start'|'end' = 'end'): HTMLLIElement {
         let li = document.createElement("li");
 
         let closeBtn = document.createElement("div");
@@ -10,11 +12,11 @@ export class ListTemplate {
         li.append(closeBtn);
 
         let h3 = document.createElement("h3");
-        h3.innerText = category;
+        h3.innerText = entry.category;
         li.append(h3);
 
         let data = document.createElement("div");
-        data.innerText = message;
+        data.innerText = `You have spent ${entry.price} on ${entry.details} on ${entry.date}`;
         li.append(data);
 
         if (position === 'start')

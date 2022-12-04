@@ -75,7 +75,7 @@ li {
     padding: 18px;
     border: 1px solid black;
     border-radius: 3px;
-    width: 70%;
+    width: 85%;
 }
 
 .close-btn {
@@ -86,4 +86,10 @@ li {
     margin-right: 18px;
     float: left;
     text-align: center;
+    transition: all 1.2s;
+}
+
+.close-btn:hover {
+    background-color: #ca2424;
+    cursor: pointer;
 }

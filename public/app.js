@@ -11,7 +11,7 @@ const listTemplate = new ListTemplate(unorderedList);
 entryForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let entryToAdd = new Entry(categoryInput.value, new Date(dateInput.value), priceInput.valueAsNumber, detailsInput.value);
-    listTemplate.render(entryToAdd.category, `You have spent ${entryToAdd.price} on ${entryToAdd.details} on ${entryToAdd.date}`);
+    listTemplate.render(entryToAdd);
     entries.push(entryToAdd);
     localStorage.setItem((entries.length - 1).toString(), JSON.stringify(entryToAdd));
     console.log("The value has been saved!");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         const key = localStorage.key(i);
         const value = JSON.parse(localStorage.getItem(key));
         entries.push(value);
-        listTemplate.render(value.category, `You have spent ${value.price} on ${value.details} on ${value.date}`);
+        listTemplate.render(value);
     }
 });
 unorderedList.addEventListener("click", function (e) {
@@ -33,4 +33,3 @@ unorderedList.addEventListener("click", function (e) {
         unorderedList.removeChild(listItemParent);
     }
 });
-console.log(entries);
